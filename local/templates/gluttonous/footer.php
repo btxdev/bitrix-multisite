@@ -9,13 +9,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     <div class="container text-center mb-4">
         <div class="row">
             <div class="col-md-4">
-                <a href="index.html" class="text-white">На главную</a>
+                <a href="index" class="text-white">На главную</a>
             </div>
             <div class="col-md-4">
-                <a href="faq.html" class="text-white">Вопросы и ответы</a>
+                <a href="faq" class="text-white">Вопросы и ответы</a>
             </div>
             <div class="col-md-4">
-                <a href="catalog.html" class="text-white">Каталог</a>
+                <a href="catalog" class="text-white">Каталог</a>
             </div>
         </div>
     </div>

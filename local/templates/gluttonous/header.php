@@ -42,7 +42,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/js/script.js');
     <div class="main-wrapper" id="app">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Обжорозаврик <i class="fas fa-dragon"></i></a>
+                <a class="navbar-brand" href="index">Обжорозаврик <i class="fas fa-dragon"></i></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -51,18 +51,18 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/js/script.js');
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="dinosaurs.html">Динозавры</a>
+                            <a class="nav-link" href="dinosaurs">Динозавры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Блог</a>
+                            <a class="nav-link" href="blog">Блог</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shelter.html">Приют динозавриков</a>
+                            <a class="nav-link" href="shelter">Приют динозавриков</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="auth.html">Войти</a>
-                            <a class="btn btn-outline-secondary" href="register.html">Зарегистрироваться</a>
+                            <a class="btn btn-secondary" href="auth">Войти</a>
+                            <a class="btn btn-outline-secondary" href="register">Зарегистрироваться</a>
                         </li>
 
                         <li class="nav-item dropdown">
