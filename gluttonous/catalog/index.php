@@ -2,9 +2,8 @@
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-$APPLICATION->SetPageProperty("title", "Обжорозаврик - Приюти и покорми динозаврика");
-$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
-$APPLICATION->SetTitle("Обжорозаврик - Приюти и покорми динозаврика");
+$APPLICATION->SetPageProperty("title", "Каталог");
+$APPLICATION->SetTitle("Каталог");
 
 ?>
 
@@ -15,14 +14,19 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
             <small>Корм</small>
         </h1>
 
+        <!-- Навигационная цепочка -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="index">Главная</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a href="index">Каталог</a>
-            </li>
-            <li class="breadcrumb-item active">Корм</li>
+            <?
+            $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "universal",
+                Array(
+                    "PATH" => "",
+                    "SITE_ID" => "s1",
+                    "START_FROM" => "0"
+                )
+            );
+            ?>
         </ol>
 
         <div class="row">

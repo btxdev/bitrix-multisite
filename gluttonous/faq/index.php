@@ -12,10 +12,8 @@ $APPLICATION->SetTitle("Вопросы и ответы");
 
         <h1 class="mt-4 mb-3"><? $APPLICATION->showTitle() ?></h1>
 
-
         <!-- Навигационная цепочка -->
         <ol class="breadcrumb">
-
             <?
             $APPLICATION->IncludeComponent(
                 "bitrix:breadcrumb",
@@ -27,14 +25,7 @@ $APPLICATION->SetTitle("Вопросы и ответы");
                 )
             );
             ?>
-
-            <!-- <li class="breadcrumb-item">
-                <a href="index">Главная</a>
-            </li>
-            <li class="breadcrumb-item active">Вопросы и ответы</li> -->
-
         </ol>
-
 
         <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="card">

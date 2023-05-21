@@ -48,36 +48,39 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/js/script.js');
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+
+                <!-- Шапка -->
                 <div class="collapse navbar-collapse" id="navbarResponsive">
+
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="dinosaurs">Динозавры</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog">Блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shelter">Приют динозавриков</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="btn btn-secondary" href="auth">Войти</a>
-                            <a class="btn btn-outline-secondary" href="register">Зарегистрироваться</a>
-                        </li>
+                        <!-- Динамические элементы меню -->
+                        <?
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "header",
+                            Array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "header",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "1",
+                                "MENU_CACHE_GET_VARS" => array(""),
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_THEME" => "site",
+                                "ROOT_MENU_TYPE" => "header",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "header"
+                            ),
+                            false
+                        );
+                        ?>
 
-                        <li class="nav-item dropdown">
-                            <a class="avatar-link nav-link dropdown-toggle" href="#" id="navbarDropdownBlog"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="/images/avartar-dinosaur-100.png" class="rounded-circle bg-white avatar-img"
-                                    alt="Аватар">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                                <a class="dropdown-item" href="#">Личный кабинет</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Выйти</a>
-                            </div>
-                        </li>
                     </ul>
+
                 </div>
+
             </div>
         </nav>

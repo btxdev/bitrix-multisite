@@ -13,7 +13,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             "footer",
             Array(
                 "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "left",
+                "CHILD_MENU_TYPE" => "footer",
                 "DELAY" => "N",
                 "MAX_LEVEL" => "1",
                 "MENU_CACHE_GET_VARS" => array(""),
@@ -21,7 +21,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 "MENU_CACHE_TYPE" => "N",
                 "MENU_CACHE_USE_GROUPS" => "Y",
                 "MENU_THEME" => "site",
-                "ROOT_MENU_TYPE" => "top",
+                "ROOT_MENU_TYPE" => "footer",
                 "USE_EXT" => "N",
                 "COMPONENT_TEMPLATE" => "footer"
             ),
@@ -33,8 +33,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     <div class="container">
         <p class="m-0 text-center text-white">
             Copyright &copy; Обжорозаврик 2020.
-            Создано для проекта <a href="https://bitrixcasts.ru" rel="nofollow" target="_blank">BitrixCasts</a>.
-            Автор <a href="https://mvsvolkov.ru" rel="nofollow" target="_blank">Волков Михаил</a> <i
+            Верстка и дизайн <a href="https://mvsvolkov.ru" rel="nofollow" target="_blank">Волков Михаил</a> <i
                 class="fas fa-heart text-danger"></i>
         </p>
     </div>
