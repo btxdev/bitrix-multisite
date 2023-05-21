@@ -100,7 +100,7 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
                 "CACHE_TIME" => "36000000",
                 "CACHE_TYPE" => "A",
                 "CHECK_DATES" => "Y",
-                "DETAIL_URL" => "/gluttonous/dinosaurs/#CODE#/",
+                "DETAIL_URL" => "/gluttonous/dinosaurs/detail/#CODE#/",
                 "DISPLAY_BOTTOM_PAGER" => "Y",
                 "DISPLAY_DATE" => "Y",
                 "DISPLAY_NAME" => "Y",
