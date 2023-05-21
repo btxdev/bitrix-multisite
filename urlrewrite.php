@@ -10,7 +10,7 @@ $arUrlRewrite=array (
   ),
   2 => 
   array (
-    'CONDITION' => '#^/dinosaurs/#',
+    'CONDITION' => '#^/gluttonous/dinosaurs/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/gluttonous/dinosaurs/item.php',
