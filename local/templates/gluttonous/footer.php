@@ -6,19 +6,30 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 
 <footer class="py-5 bg-dark">
-    <div class="container text-center mb-4">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="index" class="text-white">На главную</a>
-            </div>
-            <div class="col-md-4">
-                <a href="faq" class="text-white">Вопросы и ответы</a>
-            </div>
-            <div class="col-md-4">
-                <a href="catalog" class="text-white">Каталог</a>
-            </div>
-        </div>
-    </div>
+
+    <?
+        $APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "footer",
+            Array(
+                "ALLOW_MULTI_SELECT" => "N",
+                "CHILD_MENU_TYPE" => "left",
+                "DELAY" => "N",
+                "MAX_LEVEL" => "1",
+                "MENU_CACHE_GET_VARS" => array(""),
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_TYPE" => "N",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_THEME" => "site",
+                "ROOT_MENU_TYPE" => "top",
+                "USE_EXT" => "N",
+                "COMPONENT_TEMPLATE" => "footer"
+            ),
+            false
+        );
+    ?>
+
+    <!-- верстка -->
     <div class="container">
         <p class="m-0 text-center text-white">
             Copyright &copy; Обжорозаврик 2020.
@@ -27,7 +38,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 class="fas fa-heart text-danger"></i>
         </p>
     </div>
+
 </footer>
 </body>
-
 </html>

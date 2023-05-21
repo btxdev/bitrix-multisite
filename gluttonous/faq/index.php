@@ -2,23 +2,39 @@
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-$APPLICATION->SetPageProperty("title", "Обжорозаврик - Приюти и покорми динозаврика");
-$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
-$APPLICATION->SetTitle("Обжорозаврик - Приюти и покорми динозаврика");
+$APPLICATION->SetPageProperty("title", "Вопросы и ответы");
+$APPLICATION->SetTitle("Вопросы и ответы");
 
 ?>
 
 
     <div class="container">
 
-        <h1 class="mt-4 mb-3">Вопросы и ответы</h1>
+        <h1 class="mt-4 mb-3"><? $APPLICATION->showTitle() ?></h1>
 
+
+        <!-- Навигационная цепочка -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item">
+
+            <?
+            $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "universal",
+                Array(
+                    "PATH" => "",
+                    "SITE_ID" => "s1",
+                    "START_FROM" => "0"
+                )
+            );
+            ?>
+
+            <!-- <li class="breadcrumb-item">
                 <a href="index">Главная</a>
             </li>
-            <li class="breadcrumb-item active">Вопросы и ответы</li>
+            <li class="breadcrumb-item active">Вопросы и ответы</li> -->
+
         </ol>
+
 
         <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="card">
@@ -62,3 +78,5 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
 
     </div>
 </div>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

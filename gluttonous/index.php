@@ -208,7 +208,7 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
                         <small class="mt-2 text-muted">Опубликовано вчера</small>
                     </div>
                     <div class="card-footer">
-                        <a href="blog-post" class="btn btn-primary">Подробнее</a>
+                        <a href="blog-post/" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
                         <small class="mt-2 text-muted">Опубликовано вчера</small>
                     </div>
                     <div class="card-footer">
-                        <a href="blog-post" class="btn btn-primary">Подробнее</a>
+                        <a href="blog-post/" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -229,7 +229,7 @@ $APPLICATION->SetTitle("Обжорозаврик - Приюти и покорм�
 
         <div class="row mb-4 justify-content-center">
             <div class="col-md-4">
-                <a class="btn btn-lg btn-outline-primary btn-block" href="blog">Перейти в блог</a>
+                <a class="btn btn-lg btn-outline-primary btn-block" href="blog/">Перейти в блог</a>
             </div>
         </div>
 
