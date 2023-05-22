@@ -1,17 +1,17 @@
 <?
 
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("");
+$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "N");
 
 ?>
 
 <?
 $APPLICATION->IncludeComponent(
 	"bitrix:news",
-	"",
+	"dinosaurs",
 	Array(
-		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -41,7 +41,7 @@ $APPLICATION->IncludeComponent(
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "gluttonous",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
@@ -76,7 +76,8 @@ $APPLICATION->IncludeComponent(
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "Y",
-		"USE_SHARE" => "N"
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "dinosaurs"
 	)
 );
 ?>
