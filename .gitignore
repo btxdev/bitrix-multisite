@@ -34,7 +34,6 @@
 /webstat/
 /.idea/
 /.csscomb.json
-/.htaccess
 /sitemap*.xml
 /sftp-config.json
 /robots.txt
@@ -57,3 +56,5 @@ AI-BOLIT-*
 # core
 /bitrix/
 upload/
+
+!/local/templates/gluttonous/vendor/
