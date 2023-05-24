@@ -16,7 +16,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 $this->setFrameMode(true);
 
-$APPLICATION->setTitle('HELLO');
+$APPLICATION->setTitle($arResult["NAME"]);
 
 ?>
 
@@ -53,7 +53,19 @@ $APPLICATION->setTitle('HELLO');
 		</div>
 
 		<?
-			dd($arResult);
+		if(isset($arResult['DISPLAY_PROPERTIES']) && is_array($arResult['DISPLAY_PROPERTIES'])) {
+			$atts = $arResult['DISPLAY_PROPERTIES'];
+			$latname = '';
+			$length = '';
+			$mass = '';
+			$speed = '';
+			$period = '';
+			if (isset($atts['ATT_LNAME']) && isset($atts['ATT_LNAME']['VALUE'])) $latname = $atts['ATT_LNAME']['VALUE'];
+			if (isset($atts['ATT_LEN']) && isset($atts['ATT_LEN']['VALUE'])) $length = $atts['ATT_LEN']['VALUE'];
+			if (isset($atts['ATT_MASS']) && isset($atts['ATT_MASS']['VALUE'])) $mass = $atts['ATT_MASS']['VALUE'];
+			if (isset($atts['ATT_SPEED']) && isset($atts['ATT_SPEED']['VALUE'])) $speed = $atts['ATT_SPEED']['VALUE'];
+			if (isset($atts['ATT_PERIOD']) && isset($atts['ATT_PERIOD']['VALUE'])) $period = $atts['ATT_PERIOD']['VALUE'];
+		}
 		?>
 
 		<!-- Карточка динозавра -->
@@ -62,11 +74,11 @@ $APPLICATION->setTitle('HELLO');
 			<p><?= $arResult["PREVIEW_TEXT"] ?></p>
 			<h3 class="my-3">Особенности динозавра</h3>
 			<ul>
-				<li><b>Латинское название</b>: NONE</li>
-				<li><b>Рост</b>: NONE</li>
-				<li><b>Масса</b>: NONE</li>
-				<li><b>Скорость</b>: NONE</li>
-				<li><b>Продолжительность жизни</b>: NONE</li>
+				<li><b>Латинское название</b>: <?= $latname ?></li>
+				<li><b>Рост</b>: <?= $length ?></li>
+				<li><b>Масса</b>: <?= $mass ?></li>
+				<li><b>Скорость</b>: <?= $speed ?></li>
+				<li><b>Продолжительность жизни</b>: <?= $period ?></li>
 			</ul>
 		</div>
 

@@ -13,17 +13,28 @@
 $this->setFrameMode(true);
 ?>
 
-news
+<div class="container">
 
-<?if($arParams["USE_RSS"]=="Y"):?>
+<h1 class="mt-4 mb-3">Динозавры</h1>
+
+<!-- Навигационная цепочка -->
+<ol class="breadcrumb">
 	<?
-	if(method_exists($APPLICATION, 'addheadstring'))
-		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" href="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" />');
+	$APPLICATION->IncludeComponent(
+		"bitrix:breadcrumb",
+		"universal",
+		Array(
+			"PATH" => "",
+			"SITE_ID" => "s1",
+			"START_FROM" => "0"
+		)
+	);
 	?>
-	<a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"]?>" title="rss" target="_self"><img alt="RSS" src="<?=$templateFolder?>/images/gif-light/feed-icon-16x16.gif" border="0" align="right" /></a>
-<?endif?>
+</ol>
 
+<!-- Поиск -->
 <?if($arParams["USE_SEARCH"]=="Y"):?>
+
 <?=GetMessage("SEARCH_LABEL")?><?$APPLICATION->IncludeComponent(
 	"bitrix:search.form",
 	"flat",
@@ -33,7 +44,30 @@ news
 	$component
 );?>
 <br />
+
 <?endif?>
+
+<!-- <div class="row">
+	<div class="col-lg-12">
+		<div class="mb-4">
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Поиск...">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<?if($arParams["USE_RSS"]=="Y"):?>
+	<?
+	if(method_exists($APPLICATION, 'addheadstring'))
+		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" href="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" />');
+	?>
+	<a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"]?>" title="rss" target="_self"><img alt="RSS" src="<?=$templateFolder?>/images/gif-light/feed-icon-16x16.gif" border="0" align="right" /></a>
+<?endif?>
+
 <?if($arParams["USE_FILTER"]=="Y"):?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.filter",
@@ -54,9 +88,12 @@ news
 ?>
 <br />
 <?endif?>
-<?$APPLICATION->IncludeComponent(
+
+
+<?
+$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"",
+	"dinosaurs",
 	Array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -106,4 +143,8 @@ news
 		"CHECK_DATES" => $arParams["CHECK_DATES"],
 	),
 	$component
-);?>
+);
+?>
+
+
+</div>
